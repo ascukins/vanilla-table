@@ -1,0 +1,122 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+}
+
+.table-component-container {
+  max-width: 800px;
+  padding: 50px 10px;
+  margin: 0 auto;
+}
+
+.table-component-container > .table-toolbar {
+  text-align: right;
+  padding: 0 3px 15px;
+}
+
+.table > .table-row,
+.table > .table-header-row {
+  display: grid;
+
+  grid-template-columns:
+    minmax(20px, 2fr)
+    minmax(90px, 9fr)
+    minmax(50px, 5fr)
+    minmax(50px, 5fr)
+    minmax(50px, 5fr)
+    19px;
+  grid-gap: 2px;
+  box-sizing: border-box;
+  padding: 2px;
+  transition: background-color 0.03s ease-in-out;
+  cursor: pointer;
+}
+
+.table > .table-row:hover {
+  background-color: lavender;
+}
+
+.table > .table-header-row > .table-header-cell {
+  font-weight: bold;
+  border-bottom: 1px solid gray;
+  padding: 6px 0;
+}
+
+.table > .table-header-row > .table-header-cell:hover {
+  /* font-weight: bold; */
+  /* border-bottom: 1px solid gray; */
+  background-color: lavender;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: blueviolet;
+  color: white;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 15px;
+  transition: background-color 0.1s linear;
+}
+
+.btn.btn-delete {
+  border-radius: 10px;
+  padding: 1px 5px 1px;
+  max-height: 19px;
+  max-width: 19px;
+  background-color: mediumvioletred;
+}
+
+.btn:hover {
+  background-color: blue;
+}
+
+.btn-dialog-close {
+  font-size: 30px;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  line-height: 16px;
+  background-color: #333;
+  color: #fff;
+  padding: 0 12px;
+}
+@media only screen and (max-width: 400px) {
+  .table > .table-row,
+  .table > .table-header-row {
+    grid-template-columns: none;
+  }
+
+  .table > .table-row {
+    border-bottom: 1px solid black;
+    position: relative;
+  }
+
+  .btn.btn-delete {
+    transform: scale(1.6);
+    position: absolute;
+    right: 10px;
+    top: 20px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .btn-dialog-close {
+    right: -5px;
+    top: -5px;
+  }
+  .relative {
+    padding: 20px 10px;
+  }
+}
