@@ -34,3 +34,15 @@ App is most probably not compatible with Internet Explorer, not tested.
 REST is implemented in 4 methods: GET, PUT, POST, DELETE. Tried to be close to classical approach when implementing PUT and POST, actually, for tables with unique indices implementing both does not have particular sense, one of them would be enough.
 
 No bundler has been set up for project. It's planned to be done later.
+
+## TO DO
+
+Things that will be fixed later:
+
+- bundler
+- CSS harmonization
+- Pop-up abstraction
+- Event attachment and detachment
+- browser history handling
+- field names for molile view
+- html forms
