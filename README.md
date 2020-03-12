@@ -46,3 +46,4 @@ Things that will be fixed later:
 - browser history handling
 - field names for molile view
 - html forms
+- sanitize innerhtml setting
